@@ -1,0 +1,89 @@
+.nos_metier_main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nos_metier_single {
+    margin: 40px;
+}
+
+.nos_metier_single img {
+    width: 310px;
+    height: 388px;
+}
+
+.nos_metier_main h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nos_metier_main a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #8a8888;
+    border-radius: 50px;
+    width: 50%;
+    margin: auto;
+    padding: 8px 12px;
+    font-size: 12px;
+    margin-top: 40px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+}
+
+.nos_metier_main a:hover {
+    background: #8a8888;
+    color: white;
+}
+
+.cards {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.cards:hover {
+    //transform: rotateY(180deg);
+}
+
+.thefront {
+    position: absolute;
+    width: 310px;
+    height: 388px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.theback {
+    background: rgb(34, 34, 34);
+    width: 310px;
+    height: 388px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    >p {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .nos_metier_main {
+        flex-direction: column;
+    }
+    .nos_metier_single img {
+        width: 100%;
+    }
+    .nos_metier_single {
+        margin-top: 0px;
+    }
+}

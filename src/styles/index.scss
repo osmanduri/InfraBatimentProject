@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    color: black;
+    list-style-type: none;
+}
+
+.container {
+    width: 1050px;
+    margin: auto;
+}
+
+.container_projets {
+    width: 1300px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+    .container_projets {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@import './components/header.scss';
+@import './components/navigation.scss';
+@import './components/home.scss';
+@import './components/nos_metier.scss';
+@import './components/presentation.scss';
+@import './components/project.scss';
+@import './components/footer.scss';
+@import './components/posts.scss';
+@import './components/contact.scss';
+@import './components/details_posts_component.scss';
+@import './components/auth.scss';

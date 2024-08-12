@@ -1,0 +1,243 @@
+    .footer_main {
+        height: 450px;
+        background: rgb(25, 25, 25);
+        width: 100%;
+        margin-top: -5px;
+    }
+    
+    .footer {
+        display: flex;
+        padding-top: 110px;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    .footer_reseaux_sociaux {
+        height: 136px;
+    }
+    
+    .footer_reseaux_sociaux img {
+        width: 207px;
+        height: 55px;
+    }
+    
+    .footer h2 {
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+    
+    .footer_adresse {
+        margin-top: 45px;
+    }
+    
+    .footer_numero {
+        margin-top: 5px;
+    }
+    
+    .footer_email {
+        margin-top: 5px;
+    }
+    
+    .footer p {
+        color: white;
+        font-size: 16px;
+    }
+    
+    .footer_reseaux_sociaux_logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    
+    .footer_reseaux_sociaux_logo i {
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    i.fab.fa-facebook-f {
+        background: #212121;
+    }
+    
+    i.fab.fa-facebook-f:hover {
+        background-color: #3b5998
+    }
+    
+    i.fab.fa-instagram {
+        background: #212121;
+    }
+    
+    i.fab.fa-instagram:hover {
+        background-color: #e95950
+    }
+    
+    i.fab.fa-google-plus-g {
+        background: #212121;
+    }
+    
+    i.fab.fa-google-plus-g:hover {
+        background-color: #db4a39;
+    }
+    
+    i.fab.fa-snapchat-ghost {
+        background: #212121;
+    }
+    
+    i.fab.fa-snapchat-ghost:hover {
+        background-color: #FFFC00;
+        color: #212121;
+    }
+    
+    .footer_contact {
+        height: 136px;
+    }
+    
+    i.fas.fa-home {
+        margin-right: 17px;
+    }
+    
+    i.fas.fa-phone {
+        margin-right: 20px;
+    }
+    
+    i.far.fa-envelope {
+        margin-right: 20px;
+    }
+    
+    .liens_utiles {
+        height: 136px;
+    }
+    
+    .liens_utiles li {
+        color: white;
+        padding-top: 8px;
+    }
+    
+    .liens_utiles.footer_liens {
+        display: flex;
+    }
+    
+    .liens_utiles a {
+        color: white;
+        transition: all 1s ease-in-out;
+    }
+    
+    .liens_utiles a:hover {
+        text-decoration: underline;
+    }
+    
+    .liens {
+        margin-top: 30px;
+    }
+    
+    .footer_semaine {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 200px;
+    }
+    
+    .footer_horaires_second {
+        margin-top: 35px;
+    }
+    
+    .footer_horaires {
+        height: 136px;
+    }
+    
+    .footer_trait {
+        height: 1px;
+        background: white;
+        width: 100%;
+    }
+    
+    .copyright {
+        background: rgb(25, 25, 25);
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        >p {
+            color: white;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .footer_main {
+            width: 100%;
+            height: 1000px;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .footer_reseaux_sociaux_logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .liens_utiles {
+            height: 136px;
+            width: 100%;
+            margin-top: 80px;
+        }
+        .footer_horaires {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+        .footer_contact {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+        .footer p {
+            font-size: 13px;
+        }
+        .footer h2 {
+            font-size: 16px;
+            text-align: center;
+        }
+        .footer li {
+            font-size: 13px;
+        }
+        .liens {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .copyright {
+            >p {
+                font-size: 12px;
+                text-align: center;
+                margin-left: 10px;
+            }
+        }
+        .footer_trait {
+            width: 100%;
+        }
+        i{
+            padding: 10px;
+        }
+    }

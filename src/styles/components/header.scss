@@ -1,0 +1,142 @@
+.header {
+    margin: auto;
+    width: 1200px;
+}
+
+.header_info {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.connexion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 68%;
+    >a {
+        color: black;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
+
+.header_email {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    >i {
+        color: #8a8888;
+        ;
+    }
+    >p {
+        font-size: 13px;
+    }
+}
+
+.header_phone {
+    display: flex;
+    align-items: center;
+    >i {
+        color: #8a8888;
+        ;
+    }
+    >p {
+        font-size: 13px;
+    }
+}
+
+.header_trait {
+    height: 1px;
+    background: #8a8888;
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.burger_menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #333;
+    height: 51px;
+}
+
+.burger_menu i {
+    font-size: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar_mobile {
+    position: absolute;
+    top: 150px;
+    left: -100%;
+    height: 590px;
+    z-index: 999;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar_mobile.active {
+    background: #242222;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    opacity: 1;
+    height: 590px;
+    z-index: 999;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar_mobile ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    transition: all 0.5s ease;
+    height: 590px;
+}
+
+.navbar_mobile ul li {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.navbar_mobile ul li:hover {
+    background: white;
+    a {
+        color: #242222;
+    }
+}
+
+.navbar_mobile ul li a {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+
+.header_user_bienvenue{
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.userDataPseudo{
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1050px) {
+    .header {
+        display: none;
+    }
+    .header_trait {
+        display: none;
+    }
+}
