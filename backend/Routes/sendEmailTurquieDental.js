@@ -3,8 +3,40 @@ const nodemailer = require('nodemailer')
 const path  = require('path');
 const hbs = require('nodemailer-express-handlebars')
 
-router.post('/', (req, res) => {
-    res.send('send mail done')
+router.post('/send_mail_to_portfolio_osman', (req, res) => {
+    const { name, phone, email, subject, message } = req.body;
+    
+    // Configurer le transporteur pour l'envoi d'email
+    let transporter = nodemailer.createTransport({
+        host:'smtp.ionos.fr',
+        port:'465',
+        auth: {
+            user: process.env.USER_MAIL,
+            pass: process.env.PASSWORD
+        }
+    });
+
+            // Options de l'email
+    let mailOptions = {
+        from: process.env.USER_MAIL,
+        to: 'osman.duri@hotmail.fr', // Remplacez par l'email du destinataire
+        subject: `${subject}`,
+        text: `
+        Nom: ${name}
+        Téléphone: ${phone},
+        Email: ${email},
+        Sujet: ${subject},
+        Message: ${message}
+        `
+    };
+        // Envoyer l'email
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                return res.status(500).json({ error: error.toString() });
+            }
+            res.status(200).json({ message: 'Email envoyé avec succès!' });
+        });
+    
 })
 
 router.post('/send', (req, res) => {

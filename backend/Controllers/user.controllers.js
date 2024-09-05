@@ -120,3 +120,7 @@ module.exports.signOut = (req, res) => {
     res.cookie('jwt', '', { maxAge: 1 });
     res.redirect('/users')
 }
+
+module.exports.sendMail = (req, res) => {
+    res.send('yes')
+}

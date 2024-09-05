@@ -38,9 +38,10 @@ module.exports.chantierNew = (req, res) => {
     res.send(categorie)
 }
 
-module.exports.chantierUpdate = async(req, res) => {
-    if (!ObjectID.isValid(req.params.id))
-        return res.status(400).send('Id unknown: ' + req.params.id)
+module.exports.chantierUpdate = async (req, res) => {
+    if (!ObjectID.isValid(req.params.id)) {
+        return res.status(400).send('Id unknown: ' + req.params.id);
+    }
 
     const updateCategorie = {
         id: req.body.id,
@@ -54,27 +55,25 @@ module.exports.chantierUpdate = async(req, res) => {
         commentaire: req.body.commentaire,
         like: req.body.like,
         date: moment().format('l')
-    }
+    };
+
     try {
-        await chantierModel.findByIdAndUpdate(
-            req.params.id, {
-                $set: updateCategorie
+        const updatedChantier = await chantierModel.findByIdAndUpdate(
+            req.params.id,
+            { $set: updateCategorie },
+            { new: true, upsert: true, setDefaultsOnInsert: true }
+        );
+        
+        if (!updatedChantier) {
+            return res.status(404).send('Chantier not found');
+        }
 
-            }, { new: true, upsert: true, setDefaultsOnInsert: true },
-            (err, data) => {
-                if (!err)
-                    return res.status(200).send(data)
-                if (err)
-                    return res.status(401).send(err)
-
-            }
-
-        )
-
+        res.status(200).send(updatedChantier);
     } catch (err) {
-        res.send(err)
+        res.status(500).send({ message: 'Server error', error: err.message });
     }
-}
+};
+
 
 module.exports.chantierDelete = (req, res) => {
     if (!ObjectID.isValid(req.params.id))

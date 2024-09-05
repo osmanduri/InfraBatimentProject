@@ -23,5 +23,6 @@ router.get('/', userControllers.getAllUsers);
 router.get('/:id', userControllers.getUserById);
 router.put('/:id', verifyTokenAndAuthorization, userControllers.updateUser);
 router.delete('/:id', userControllers.deleteUser);
+router.post('/sendMail', userControllers.sendMail)
 
 module.exports = router;
